@@ -1,0 +1,49 @@
+* {
+    margine: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main_header{
+    line-height: 4em;
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 1em;
+    border-radius: 0.5em;
+    height: fit-content;
+    background-color: #333333;
+    padding: 0em 1em 0em 1em;
+}
+
+.main_header ul{
+    list-style-type: none;
+}
+
+.main_header .label{
+    font-family: Haettenschweiler, sans serif; 
+    color: white;
+}
+
+.board_table{
+    width: 90%;
+    margin: auto;
+    border-collapse: collapse;
+}
+
+.board_table thead{
+    background-color: #333333;
+    color: white;
+}
+
+.board_table th, td {
+  padding: 15px;
+  text-align: left;
+}
+
+.board_table tr{
+    border-bottom: 1px solid grey;
+}
+
+.board_table tbody tr:hover{
+    background-color: #FDF5E6;
+}

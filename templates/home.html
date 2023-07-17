@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SimpleForum</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header class="main_header">
+        <ul class="main_header_list">
+            <li class="label"><h1>Simple Forum</h1></li>
+            <li class="label"><h1>Simple Forum</h1></li>
+            <li class="label"><h1>Simple Forum</h1></li>
+            <li class="search">
+                <input type="search" id="site-search" name="q">
+                <button>Search</button>
+            </li>
+        </ul>
+        
+    </header>
+    <table class="board_table">
+        <thead>
+            <tr>
+                <th>Board</th>
+                <th>Posts</th>
+                <th>Topics</th>
+                <th>Last Post</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for board in boards %}
+                <tr>
+                    <td>
+                        {{ board.name }}<br>
+                        <small style="color: #888">{{ board.description }}</small>
+                    </td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td></td>
+                </tr>
+            {% endfor %}
+      </tbody>
+    </table>
+
+</body>
+</html>
