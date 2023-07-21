@@ -1,24 +1,18 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>SimpleForum</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-</head>
-<body>
-    <header class="main_header">
+{% extends 'base.html' %}
+
+{% block breadcrumb %}
+    <div class="main_header">
         <ul class="main_header_list">
-            <li class="label"><h1>Simple Forum</h1></li>
-            <li class="label"><h1>Simple Forum</h1></li>
-            <li class="label"><h1>Simple Forum</h1></li>
+            <li class="label"><h1>All Boards</h1></li>
             <li class="search">
                 <input type="search" id="site-search" name="q">
                 <button>Search</button>
             </li>
         </ul>
-        
-    </header>
+    </div>
+{% endblock %}
+
+{% block content %}
     <table class="board_table">
         <thead>
             <tr>
@@ -32,7 +26,7 @@
             {% for board in boards %}
                 <tr>
                     <td>
-                        {{ board.name }}<br>
+                        <a href="{% url 'board_topics' board.pk %}">{{ board.name }}</a><br>
                         <small style="color: #888">{{ board.description }}</small>
                     </td>
                     <td>0</td>
@@ -42,6 +36,4 @@
             {% endfor %}
       </tbody>
     </table>
-
-</body>
-</html>
+{% endblock %}
