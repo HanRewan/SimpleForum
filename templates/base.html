@@ -8,15 +8,13 @@
   </head>
   <body>
     <div class="navbar">
-      <div class="">
-        <a class="" href="{% url 'home' %}">Django Boards</a>
+      <div class="navbar_content">
+        <a class="navbar_main" href="{% url 'home' %}">Django Boards</a>
       </div>
     </div>
-    <div class="container">
-      <ol class="breadcrumb my-4">
-        {% block breadcrumb %}
-        {% endblock %}
-      </ol>
+    <div class='content'>
+      {% block breadcrumb %}
+      {% endblock %}
       {% block content %}
       {% endblock %}
     </div>
